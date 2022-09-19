@@ -1,7 +1,7 @@
 ---
 title: "Introduction to R Programming"
-author: "Sana Rasheed"
-date: "May 14, 2020"
+author: "Abdul Rahemm"
+date: "Sep 19, 2022"
 output: html_document
 ---
 
@@ -26,26 +26,41 @@ output: html_document
 #### Start solution ####
 ```
 
-
-```{r }
-
+```{r } 
+# 01
+n <- c('AbdulRaheem')
+sn<-strsplit(x,"")  #split name alphabet
+sn
 ```
 
-
 ```{r }
-
+# 02
+class(sn); length(sn)
+vl<-unlist(sn,use.names = FALSE)
+class(vl); length(vl)
+a1<-paste(vl, collapse ="")
+a1
 ```
 
-
 ```{r }
-
+# 03. A variable containing a sequence from 100 to 120.  
+v<-c(100:120)
+v  
 ```
 
-
 ```{r }
-
+#04. Create a matrix of 3x3 dimensions that contains the even sequence of numbers starting from 2.  
+m<-matrix(nrow = 3,ncol = 3,data = seq(2,18,2))
+m
 ```
+```{r }
+#05. Assigning the names.
 
+m<-matrix(nrow = 3,ncol = 3,data = seq(2,18,2))
+row.names(m)<-c("First","Second","Third")
+colnames(m)<-c("First","Second","Third")
+m
+```
 
 ```{r }
 #### End solution ####
@@ -57,26 +72,28 @@ output: html_document
 2. Display the levels and the factor variable as a table.  
 3. Unclass the elements of the factor variable.  
 
-
 ```{r }
 #### Start solution ####
 ```
 
-
 ```{r }
+# 01. Containing the categorical variables: Employed, Unemployed, Self-Employed, with each level appearing atleast more than 2.  
 
+x<-factor(c("Employed", "Unemployed","Employed","Self-Employed","Unemployed","Employed",
+            "Self-Employed","Unemployed","Employed", "Self-Employed"))
+x
 ```
 
-
 ```{r }
-
+# 02. Display the levels and the factor variable as a table.
+levels(x)
+table(x)
 ```
 
-
 ```{r }
-
+# 03. Unclass the elements of the factor variable.
+unclass(x)
 ```
-
 
 ```{r }
 #### End solution ####
